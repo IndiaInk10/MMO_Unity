@@ -49,9 +49,9 @@ public class GameManager : MonoBehaviour
         {
             case Define.WorldObject.Monster:
                 {
-                    _monsters.Remove(go);
                     if (_monsters.Contains(go))
                     {
+                        _monsters.Remove(go);
                         if (OnSpawnEvent != null)
                             OnSpawnEvent.Invoke(-1);
                     }
